@@ -2,48 +2,49 @@ import React from 'react'
 
 export default class FundItem extends React.Component {
 
+
   render(){
-    const {item} = this.props;
+    const {item, onClickItem} = this.props;
 
     return(
         <tr className="fundItemContainer">
-          <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+          <td >
+            <a onClick={(e, sedolNumber)=> onClickItem(e, item.sedolNumber)} >
               {item.name}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               {item.sedolNumber}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               {item.price}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               {item.bid}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               {item.canc}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               {item.yield}
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               10/07/2017 - 12:00 
             </a>
           </td>
           <td>
-            <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B5L8VH1">
+            <a>
               Click Here
             </a>
           </td>

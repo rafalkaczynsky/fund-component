@@ -50,7 +50,7 @@ export default class CategoryItem extends React.Component {
   }
 
   render() {
-    const {item} = this.props;
+    const {item, onClickItem} = this.props;
 
     let tableToggle =this.state.tableToggle
     let showTable = this.state.showTable
@@ -78,7 +78,7 @@ export default class CategoryItem extends React.Component {
           </span>
         </a>
 
-        {tableToggle && showTable && <FundsTable funds={fundsObject} />}
+        {tableToggle && showTable && <FundsTable funds={fundsObject} onClickItem={onClickItem}/>}
         {tableToggle && !showTable && <SmScreenFundSet  funds={fundsObject} />}
                   
       </div>

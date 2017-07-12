@@ -8,7 +8,7 @@ export default class ListOfFundsMain extends React.Component {
 
   render(){
 
-    const {dataBase} = this.props 
+    const {dataBase, onClickItem} = this.props 
     var jp = require('jsonpath');
 
     const categoriesSearch = jp.query(dataBase, '$..category')
@@ -25,6 +25,7 @@ export default class ListOfFundsMain extends React.Component {
               key={index}
               CategoryName={category}
               dataBase={dataBase}
+              onClickItem={onClickItem}
             />
           )}
         </div>

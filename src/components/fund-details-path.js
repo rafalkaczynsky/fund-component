@@ -8,7 +8,7 @@ export default class Path extends React.Component {
         return(
             <p className="path">
                 <span>
-                    <a href="/">
+                    <a>
                         {indx[0]}
                     </a>
                 </span>
@@ -16,7 +16,7 @@ export default class Path extends React.Component {
                 <span> 
                     &gt; 
                 </span>
-                <a href="/page/funds">
+                <a>
                     {indx[1]}
                 </a>
                 </span>
@@ -24,7 +24,7 @@ export default class Path extends React.Component {
                     <span> 
                         &gt; 
                     </span>
-                    <a href="/funds/Marlborough Fund Managers">
+                    <a>
                         {indx[2]}
                     </a>
                 </span>
@@ -32,7 +32,7 @@ export default class Path extends React.Component {
                     <span> 
                         &gt; 
                     </span>
-                    <a href="/funds/Marlborough Fund Managers/B42TBF4">
+                    <a>
                         {currentPosition}
                     </a>
                 </span>

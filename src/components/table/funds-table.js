@@ -5,7 +5,7 @@ import {FundsTableHeader, FundItem} from './'
 export default class FundsTable extends React.Component {
 
   render(){
-    const {funds} = this.props
+    const {funds, onClickItem} = this.props
     return(
         <table className="fundsTable" cellSpacing="0" cellPadding="0" >
             <thead>
@@ -17,6 +17,7 @@ export default class FundsTable extends React.Component {
                 key={index}
                 item={item}
                 id={item.name}
+                onClickItem={onClickItem}
               />
               )
             }

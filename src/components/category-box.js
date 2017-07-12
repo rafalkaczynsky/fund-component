@@ -7,7 +7,7 @@ var jp = require('jsonpath');
 export default class CategoryBox extends React.Component {
 
   render() {
-    const {CategoryName, dataBase} = this.props;
+    const {CategoryName, dataBase, onClickItem} = this.props;
     const ArrayOfItems = jp.query(dataBase, '$..fundRanges[?(@.category== "' + CategoryName + '" )]');
 
     return (
@@ -19,6 +19,7 @@ export default class CategoryBox extends React.Component {
             <CategoryItem 
               key={index}
               item={item}
+              onClickItem={onClickItem}
             />
             )
           }
