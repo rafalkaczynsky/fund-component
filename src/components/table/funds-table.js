@@ -16,6 +16,7 @@ export default class FundsTable extends React.Component {
               <FundItem 
                 key={index}
                 item={item}
+                id={item.name}
               />
               )
             }

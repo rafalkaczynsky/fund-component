@@ -21,12 +21,15 @@ class App extends Component {
 
     return (
       <div className="App">
+        <button onClick={()=> this.setState({listVisible: !this.state.listVisible, detailsVisible: !this.state.detailsVisible})}>Change View</button>
         {this.state.listVisible && 
         <ListOfFundsMain
           dataBase={dataBase}
         />}
         {this.state.detailsVisible && 
-        <FundDetailsMain />
+        <FundDetailsMain 
+          dataBase={dataBase}
+        />
         }
       </div>
     );
