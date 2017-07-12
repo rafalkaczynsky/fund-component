@@ -14,17 +14,17 @@ class App extends Component {
     this.state = {
       listVisible: true,
       detailsVisible: false,
-      fundName: null
+      sedolNumber: null
     }
   }
-  handleToggle(e, name){
+  handleToggle(e, sedolNumber){
     e.preventDefault();
-    this.setState({listVisible: false, detailsVisible: true, fundName: name})
+    this.setState({listVisible: false, detailsVisible: true, sedolNumber: sedolNumber})
   }
 
   handleChangeView(){
 
-    if (this.state.fundName) {
+    if (this.state.sedolNumber) {
        this.setState({listVisible: !this.state.listVisible, detailsVisible: !this.state.detailsVisible})
     } else {
       alert('If you want see fund details page select one!')
@@ -40,12 +40,12 @@ class App extends Component {
         {this.state.listVisible && 
         <ListOfFundsMain
           dataBase={dataBase}
-          onClickItem={(e, name)=> this.handleToggle(e, name)}
+          onClickItem={(e, sedolNumber)=> this.handleToggle(e, sedolNumber)}
         />}
         {this.state.detailsVisible && 
         <FundDetailsMain 
           dataBase={dataBase}
-          fundName={this.state.fundName}
+          sedolNumber={this.state.sedolNumber}
         />
         }
       </div>

@@ -5,10 +5,10 @@ import {Path , FundDetailsContent, SideBar} from './'
 export default class FundDetailsMain extends React.Component {
     render(){
 
-    const {dataBase, fundName} = this.props 
+    const {dataBase, sedolNumber} = this.props 
     var jp = require('jsonpath');
 
-    const fundItem = jp.query(dataBase, '$..'+ fundName +'')[0]
+    const fundItem = jp.query(dataBase, '$..'+ sedolNumber +'')[0]
 
         return(
            

@@ -16,17 +16,17 @@ export default class FundDetailsContent extends React.Component {
                 <div>
                 <ul>
                     <li>
-                        <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B42TBF4/" >
+                        <a >
                             Overview
                         </a>
                     </li>
                     <li>
-                        <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B42TBF4/documents">
+                        <a>
                             Literature
                         </a>
                     </li>
                     <li>
-                        <a href="/funds/Marlborough Fund Managers/MarlboroughMultiCapIncome/B42TBF4/managers">
+                        <a>
                             Managers
                         </a>
                     </li>
