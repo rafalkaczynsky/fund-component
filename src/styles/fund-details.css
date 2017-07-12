@@ -1,0 +1,139 @@
+.detailsContainer{
+    max-width: 1000px; 
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.path {
+    color: rgb(1, 103, 77); 
+    margin-bottom: 10px; 
+    margin-left: 10px; 
+    text-transform: uppercase;
+}
+
+.path > span > a {
+    color: rgb(1, 103, 77); 
+    text-decoration: none;
+}
+
+.detailsContainer > div.mainContent {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
+
+.detailsHeaderGroup {
+    flex-grow: 3; 
+    padding: 10px; 
+    min-width: 300px; 
+    flex-basis: 10px;
+}
+
+.detailsHeaderGroup > h3 {
+    font-size: 1em; 
+    margin: 0px; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44);
+}
+
+.detailsHeaderGroup > h2 {
+    font-size: 1.5em; 
+    margin: 0px 0px 0.5em; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44);
+}
+
+.detailsHeaderGroup > div > ul {
+    list-style: none; 
+    padding: 0px; 
+    margin: 0px;
+}
+
+.detailsHeaderGroup > div > ul > li {
+    margin: 0px; 
+    padding: 5px 20px; 
+    background: rgb(245, 245, 245); 
+    color: rgb(44, 44, 44); 
+    display: inline-block; 
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.detailsHeaderGroup > div > ul > li > a {
+    text-decoration: none; 
+    color: rgb(44, 44, 44);
+}
+
+.detailsContent {
+    margin: 0px 20px 0px 0px; 
+    padding: 0px 20px 20px; 
+    background: rgb(245, 245, 245); 
+    box-sizing: border-box;    
+}
+
+.detailsContent h4 {
+    font-size: 1.2em; 
+    padding-bottom: 0.5em; 
+    padding-top: 0.5em; 
+    margin: 0px; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44); 
+    box-sizing: border-box;
+}
+
+.fundDescription {
+    margin: 0px; 
+    color: rgb(76, 76, 76);
+}
+
+.sideBar{
+    flex-grow: 1; 
+    min-width: 300px; 
+    flex-basis: 10px; 
+    padding: 10px;
+}
+
+.fundOfferLabel {
+    font-size: 1em; 
+    margin: 0px; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44);
+}
+
+.fundYieldLabel {
+    font-size: 1em; 
+    margin: 0px; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44);
+}
+
+.fundOfferValue, .fundYieldValue {
+    font-size: 1em; 
+    padding: 0px; 
+    margin: 0px; 
+    color: rgb(44, 44, 44);
+}
+
+.valuationPoint {
+    font-size: 1em; 
+    padding: 0px; 
+    margin: 0px; 
+    color: rgb(76, 76, 76);
+}
+
+.keyFactsLabel {
+    font-size: 1.2em; 
+    padding-bottom: 0.5em; 
+    padding-top: 0.5em; 
+    margin: 0px; 
+    font-weight: normal; 
+    color: rgb(44, 44, 44); 
+    box-sizing: border-box;
+}
+
+.keyFactsItem {
+    margin: 0px; 
+    color: rgb(76, 76, 76);
+}
+

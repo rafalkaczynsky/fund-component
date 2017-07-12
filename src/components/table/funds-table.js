@@ -3,9 +3,6 @@ import React from 'react'
 import {FundsTableHeader, FundItem} from './'
 
 export default class FundsTable extends React.Component {
-  constructor(props){
-    super(props)
-  }
 
   render(){
     const {funds} = this.props

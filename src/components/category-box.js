@@ -5,9 +5,6 @@ import {CategoryItem} from './'
 var jp = require('jsonpath');
 
 export default class CategoryBox extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
   render() {
     const {CategoryName, dataBase} = this.props;

@@ -74,7 +74,7 @@ export default class CategoryItem extends React.Component {
             {item.name}
           </h2>
           <span className="ItemArrowContainer">
-            <img className="ItemArrowImage" src={arrow} />
+            <img className="ItemArrowImage" alt="arrow" src={arrow} />
           </span>
         </a>
 

@@ -1,14 +1,10 @@
 import React from 'react'
 
-import {FundsTableHeader, FundItem, FundsTable} from './table'
 import {CategoryBox} from './'
-import '../App.css';
 
-export default class MainContainer extends React.Component {
-  constructor(props){
-    super(props)
+import '../styles/App.css';
 
-  }
+export default class ListOfFundsMain extends React.Component {
 
   render(){
 
