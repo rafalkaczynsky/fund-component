@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 import {ListOfFundsMain, FundDetailsMain} from './components';
+import axios from 'axios';
 
+var XMLHttpRequest = require('xhr2');
+
+var reqwest = require('reqwest')
 var dataBase = require('./data/data.json'); 
-// var data = require('http://funds.marlboroughfunds.com/marlboroughfunds.json'); 
+
 
 class App extends Component {
 
@@ -17,45 +21,36 @@ class App extends Component {
       fundName: 'testNameFund',
     }
   }
+
   handleToggle(e, sedolNumber, fundName){
     e.preventDefault();
     this.setState({listVisible: false, detailsVisible: true, sedolNumber: sedolNumber, fundName: fundName})
   }
 
   handleChangeView(){
-
     if (this.state.sedolNumber) {
        this.setState({listVisible: !this.state.listVisible, detailsVisible: !this.state.detailsVisible})
     } else {
       alert('If you want see fund details page select one!')
     }
-   
-  }
-
-  getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
+  
   }
 
   render() {
-    
-    this.getJSONP('http://funds.marlboroughfunds.com/marlboroughfunds.json', function(data){
-      console.log('livedb')
-      console.log(data);
-    }); 
 
+  //const rest_url = 'http://funds.marlboroughfunds.com/marlboroughfunds.json'
+ // let fundsResults = reqwest({url: rest_url});
+
+
+ axios
+  .get("http://codepen.io/jobs.json")
+  .then(function(result) {    
+    // we got it!
+     console.log(result)
+  });
+
+
+ 
 
     return (
       <div className="App">
