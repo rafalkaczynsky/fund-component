@@ -4,12 +4,13 @@ export default class FundItem extends React.Component {
 
 
   render(){
-    const {item, onClickItem} = this.props;
+    const {item, onClickItem, fundName} = this.props;
 
+    const _fundName = fundName
     return(
         <tr className="fundItemContainer">
           <td >
-            <a onClick={(e, sedolNumber)=> onClickItem(e, item.sedolNumber)} >
+            <a onClick={(e, sedolNumber, fundName)=> onClickItem(e, item.sedolNumber, _fundName)} >
               {item.name}
             </a>
           </td>

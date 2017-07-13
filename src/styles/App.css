@@ -97,6 +97,7 @@
 .fundItemContainer {
   padding: 3px;
 }
+
 /* small screen fund item styles */ 
 
 .SSFIcontainer {
@@ -124,3 +125,8 @@
   text-decoration: none; 
   color: rgb(76, 76, 76);
   }
+
+.documentListItem {
+  display: block; 
+  cursor: pointer;
+}

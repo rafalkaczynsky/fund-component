@@ -63,6 +63,8 @@ export default class CategoryItem extends React.Component {
 
     let arrow =  tableToggle ? arrowUp : arrowDown 
 
+    console.log(item.name)
+    
     return (
       <div className="ItemContainer" >
         <a  
@@ -78,7 +80,7 @@ export default class CategoryItem extends React.Component {
           </span>
         </a>
 
-        {tableToggle && showTable && <FundsTable funds={fundsObject} onClickItem={onClickItem}/>}
+        {tableToggle && showTable && <FundsTable funds={fundsObject} onClickItem={onClickItem} fundName={item.name}/>}
         {tableToggle && !showTable && <SmScreenFundSet  funds={fundsObject} />}
                   
       </div>

@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import {ListOfFundsMain, FundDetailsMain} from './components';
 
 var dataBase = require('./data/data.json'); 
-
-
+// var data = require('http://funds.marlboroughfunds.com/marlboroughfunds.json'); 
 
 class App extends Component {
 
@@ -14,12 +13,13 @@ class App extends Component {
     this.state = {
       listVisible: true,
       detailsVisible: false,
-      sedolNumber: null
+      sedolNumber: null,
+      fundName: 'testNameFund',
     }
   }
-  handleToggle(e, sedolNumber){
+  handleToggle(e, sedolNumber, fundName){
     e.preventDefault();
-    this.setState({listVisible: false, detailsVisible: true, sedolNumber: sedolNumber})
+    this.setState({listVisible: false, detailsVisible: true, sedolNumber: sedolNumber, fundName: fundName})
   }
 
   handleChangeView(){
@@ -32,7 +32,30 @@ class App extends Component {
    
   }
 
+  getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+  }
+
   render() {
+    
+    this.getJSONP('http://funds.marlboroughfunds.com/marlboroughfunds.json', function(data){
+      console.log('livedb')
+      console.log(data);
+    }); 
+
 
     return (
       <div className="App">
@@ -40,12 +63,13 @@ class App extends Component {
         {this.state.listVisible && 
         <ListOfFundsMain
           dataBase={dataBase}
-          onClickItem={(e, sedolNumber)=> this.handleToggle(e, sedolNumber)}
+          onClickItem={(e, sedolNumber, fundName)=> this.handleToggle(e, sedolNumber, fundName)}
         />}
         {this.state.detailsVisible && 
         <FundDetailsMain 
           dataBase={dataBase}
           sedolNumber={this.state.sedolNumber}
+          fundName={this.state.fundName}
         />
         }
       </div>

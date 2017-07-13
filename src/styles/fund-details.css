@@ -53,11 +53,14 @@
 .detailsHeaderGroup > div > ul > li {
     margin: 0px; 
     padding: 5px 20px; 
-    background: rgb(245, 245, 245); 
     color: rgb(44, 44, 44); 
     display: inline-block; 
     cursor: pointer; 
     text-decoration: none;
+}
+
+.active {
+    background: rgb(245, 245, 245); 
 }
 
 .detailsHeaderGroup > div > ul > li > a {
