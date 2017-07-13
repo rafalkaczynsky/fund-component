@@ -8,9 +8,7 @@ var XMLHttpRequest = require('xhr2');
 var reqwest = require('reqwest')
 var dataBase = require('./data/data.json'); 
 
-
 class App extends Component {
-
   constructor(props){
     super(props)
 
@@ -37,20 +35,14 @@ class App extends Component {
   }
 
   render() {
-
   //const rest_url = 'http://funds.marlboroughfunds.com/marlboroughfunds.json'
  // let fundsResults = reqwest({url: rest_url});
-
-
  axios
   .get("http://codepen.io/jobs.json")
   .then(function(result) {    
     // we got it!
      console.log(result)
   });
-
-
- 
 
     return (
       <div className="App">
