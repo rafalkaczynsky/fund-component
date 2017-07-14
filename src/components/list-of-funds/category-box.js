@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {CategoryItem} from './'
+import {CategoryItem} from '../'
 
 var jp = require('jsonpath');
 

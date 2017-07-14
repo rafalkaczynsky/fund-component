@@ -1,7 +1,8 @@
 import React from 'react'
 
-import '../styles/fund-details.css'
-import {Path , FundDetailsContent, SideBar} from './'
+import '../../styles/fund-details.css'
+import {Path , FundDetailsContent, SideBar} from '../'
+
 export default class FundDetailsMain extends React.Component {
     render(){
 

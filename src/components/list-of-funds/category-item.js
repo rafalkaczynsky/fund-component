@@ -62,8 +62,6 @@ export default class CategoryItem extends React.Component {
     let arrowDown = "http://www.marlboroughfunds.com/images/arrowdown.png"
 
     let arrow =  tableToggle ? arrowUp : arrowDown 
-
-    console.log(item.name)
     
     return (
       <div className="ItemContainer" >

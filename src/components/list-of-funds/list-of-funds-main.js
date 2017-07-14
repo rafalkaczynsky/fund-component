@@ -1,8 +1,8 @@
 import React from 'react'
 
-import {CategoryBox} from './'
+import {CategoryBox} from '../'
 
-import '../styles/App.css';
+import '../../styles/App.css';
 
 export default class ListOfFundsMain extends React.Component {
 

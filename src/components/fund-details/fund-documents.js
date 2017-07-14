@@ -1,41 +1,12 @@
 import React from 'react'
 
+import {DocumentListItem} from '../'
+var jp = require('jsonpath');
 
-
-class OverView extends React.Component {
+export default class FundDocuments extends React.Component {
     render(){
-        const {description} = this.props
-
-        return(
-            <div className="detailsContent">
-                <h4>
-                    Fund Overview
-                </h4>
-                <p className="fundDescription" dangerouslySetInnerHTML={{__html: description}}>
-                </p>
-            </div>
-        )
-    }
-}
-
-class DocumentListItem extends React.Component {
-    render(){
-        const  {path , title} = this.props
-        return(
-            <a className="documentListItem" href={path} target="_blank" >
-                {title}
-            </a>
-        )
-    }
-}
-
-class FundDocuments extends React.Component {
-    render(){
-
-        var jp = require('jsonpath');
 
         const {fundItem, dataBase, fundName} = this.props
-
 
         let KIIDpath, FactSheetPath, supplementaryInformationDocumentPath, ISAApplicationFormPath, OEICApplicationFormPath, JISAApplicationFormPath, APSFormPath, reportsAndAccounts2Path  = ''
         let KIID, FactSheet, supplementaryInformationDocument, ISAApplicationForm, OEICApplicationForm, JISAApplicationForm, APSForm, reportsAndAccounts2  = false
@@ -43,7 +14,6 @@ class FundDocuments extends React.Component {
         const universalDocuments = dataBase.marlboroughFunds["Marlborough Fund Managers"].documents[""]
         const documentsOther = dataBase.marlboroughFunds["Marlborough Fund Managers"].documents
 
-        
         if (fundName) {
             if (documentsOther[fundName]) {
                 documentsOther[fundName].reportsAndAccounts2 ? reportsAndAccounts2 = true : reportsAndAccounts2 = false
@@ -52,7 +22,6 @@ class FundDocuments extends React.Component {
        
 /*
                 ====================== L I S T    O F     U N I V E R S A L     D O C U M E N T S ==========================
-
                 "supplementaryInformationDocument":"14982067301559add649d36b6ec211e8662c3ed90fcc4.pdf",
                 "ISAApplicationForm":"149146863361708e064e1585657fe130b47b2a5ad08eb.pdf",
                 "OEICApplicationForm":"1489234830733929aed72ad124ab977317ff2ac1486aa.pdf",
@@ -119,73 +88,4 @@ class FundDocuments extends React.Component {
             </div>
         )
     }
-}
-
-export default class FundDetailsContent extends React.Component {
-
-    constructor(props){
-        super(props)
-
-        this.state = {
-            overViewShow: true,
-            literatureShow: false,
-            managersShow: false
-        }
-    }
-
-    handleOverview(e){
-        e.preventDefault();
-        this.setState({overViewShow: true, literatureShow: false, managersShow: false})
-    }
-
-    handleLiterature(e){
-        e.preventDefault();
-        this.setState({overViewShow: false, literatureShow: true, managersShow: false})
-    }
-
-    handleManagers(e){
-        e.preventDefault();
-        this.setState({overViewShow: false, literatureShow: false, managersShow: true})
-        alert('Managers clicked')
-    }
-
-    render(){
-        const {fundItem, dataBase, fundName} = this.props
-        const overViewShow = this.state.overViewShow
-        const literatureShow = this.state.literatureShow
-        const managersShow = this.state.managersShow
-
-        return(
-            <div className="detailsHeaderGroup">
-                <h3>
-                    Marlborough Fund Managers
-                </h3>
-                <h2>
-                    {fundItem.name}
-                </h2>
-                <div>
-                <ul>
-                    <li className={overViewShow ? 'active' : null} >
-                        <a onClick={(e)=> this.handleOverview(e)}>
-                            Overview
-                        </a>
-                    </li>
-                    <li className={literatureShow ? 'active' : null}>
-                        <a onClick={(e)=> this.handleLiterature(e)}>
-                            Literature
-                        </a>
-                    </li>
-                    <li className={managersShow ? 'active' : null}>
-                        <a onClick={(e)=> this.handleManagers(e)}>
-                            Managers
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            {overViewShow && <OverView description={fundItem.description}/>}
-            {literatureShow && <FundDocuments fundItem={fundItem} fundName={fundName} dataBase={dataBase}/>}
-        </div>        
-        )
-    }
-
 }

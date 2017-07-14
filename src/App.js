@@ -36,18 +36,9 @@ class App extends Component {
 
   render() {
 
-    /**
-     * 
-     * 
-     * 
-     * 
-     *  $..book[?(@.isbn)]	Filter all books with isbn number
-        $..book[?(@.price<10)]	Filter all books cheaper than 10
-        $..book[?(@.price==8.95)]	Filter all books that cost 8.95
-        $..book[?(@.price<30 && @.category=="fiction")]	Filter all fiction books cheaper than 30
-     */
   //const rest_url = 'http://funds.marlboroughfunds.com/marlboroughfunds.json'
  // let fundsResults = reqwest({url: rest_url});
+ 
  axios
   .get("http://codepen.io/jobs.json")
   .then(function(result) {    
