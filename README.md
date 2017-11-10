@@ -5,7 +5,7 @@ fund component  build with React for Marlborough
 link to component : http://marlb.mediacabin.co.uk/fund
 link to website: http://marlb.mediacabin.co.uk
 
-![alt text](https://raw.githubusercontent.com/rafalkaczynsky/react-loan-calculator/master/simple-loan-image.png)
+![alt text](https://github.com/rafalkaczynsky/fund-component/blob/master/screen-1.png)
 
 
 How to run it locally from command line
