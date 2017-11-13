@@ -1,5 +1,5 @@
 
-# react-loan-calculator
+# fund-component
 fund component  build with React for Marlborough
 
 link to component : http://marlb.mediacabin.co.uk/fund
